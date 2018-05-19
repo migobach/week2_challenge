@@ -88,4 +88,37 @@ function reverse(num) {
 }
 console.log(reverse(123456789))
 
+// palindrom checker
+function palin(words) {
+  var tester = words.toLowerCase().replace(/\s/g, '')
+  var change = tester.split("").reverse("").join("")
+  if (change === tester)
+    return "It is a palinrome!"
+  else
+    return "Sorry, try again."
+    
+}
+console.log(palin("racecar"))
+
+
+//put a string in alpha order
+function alpha(str) {
+  var tester = str.toLowerCase().replace(/\s/g, '')
+  var order = tester.split("")
+  var aToZ = order.sort().join("")
+  return aToZ
+}
+console.log(alpha("Put me in alpha order"))
+
+// capitalize the first letter of words in a string
+
+function capitalize(str) {
+  var arr = str.toLowerCase().split(' ')
+  var arrNew = []
+  for(var i = 0; i < arr.length; i++){
+    arrNew.push(arr[i].charAt(0).toUpperCase()+arr[i].slice(1))
+    }
+  return arrNew.join(' ')
+}
+console.log(capitalize("Here is a sentence that cAn be changEd"))
 
