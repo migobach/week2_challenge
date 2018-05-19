@@ -81,7 +81,6 @@ function hypTri(a, b) {
 console.log(hypTri(6, 5))
 
 // reverse a number
-
 function reverse(num) {
   var numStr = num.toString()
   return numStr.split("").reverse().join("")
@@ -122,3 +121,29 @@ function capitalize(str) {
 }
 console.log(capitalize("Here is a sentence that cAn be changEd"))
 
+
+// find the longest word in a string 
+// .findIndex() Math.max.apply(null, array) .length
+function longWord(str) {
+  var noPunc = str.replace(/[^A-Za-z0-9\s]/g, "")
+  var arrWords = noPunc.split(' ')
+  var longest = []
+  for(var x = 0; x < arrWords.length; x++){
+    longest.push(arrWords[x].length)
+   }
+  var longestIndex = Math.max.apply(null, longest)
+  for(var y = 0; y < longest.length; y++){
+    if(longest[y] === longestIndex){
+      return arrWords[y]
+    }
+  }
+}
+console.log(longWord("Which word one of these fabulous words is longest?"))
+
+
+// count the number of vowels
+function countVow(str) {
+  var vowels = str.match(/[aeiou]/gi)
+  return vowels.length
+}
+console.log(countVow("There are so many vowels and so little time."))
