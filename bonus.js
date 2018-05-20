@@ -203,3 +203,57 @@ function power(base, number) {
   return result
 }
 console.log(power(2,2))
+
+// extract and alpha unique characters from a string
+function uniques(str1) {
+  var str = str1.toLowerCase().replace(/\s/g, '')
+  var countUniq = ""
+    for(var i = 0; i < str.length; i++) {
+      if (countUniq.indexOf(str.charAt(i))==-1) {
+        countUniq += str[i]
+      } 
+    }
+  var newStr = countUniq
+  return newStr.split("").sort().join("")
+}
+console.log(uniques("Here is my string to test"))
+
+//number of occurrences of each letter in specified string
+function howMany(str) {
+  var count = {}
+ str.toLowerCase().split("").forEach(function(x) {
+       count[x] = count[x] ? count[x]+1 : 1;
+    })
+ return count
+}
+console.log(howMany("How many occurences of some letters are there?"))
+
+//number of occurrences of each letter in specified string
+function howMany(str) {
+  var count = {}
+ str.toLowerCase().split("").forEach(function(x) {
+       count[x] = count[x] ? count[x]+1 : 1;
+    })
+ return count
+}
+console.log(howMany("How many occurences of some letters are there?"))
+
+
+//function that returns array elements larger than a number
+var arr = [54,56,67,78,90,12,23,34,45]
+var higherArr = []
+
+function higherThan(arr) {
+  arr.forEach(function(x){
+    highTest = (x > 50) ? higherArr.push(x) : false;
+  })
+return higherArr
+}
+console.log(higherThan(arr))
+
+//function that returns array elements larger than a number using .filter()
+function check(x) {
+  return x > 50
+}
+
+console.log(arr.filter(check))
