@@ -110,7 +110,6 @@ function alpha(str) {
 console.log(alpha("Put me in alpha order"))
 
 // capitalize the first letter of words in a string
-
 function capitalize(str) {
   var arr = str.toLowerCase().split(' ')
   var arrNew = []
@@ -147,3 +146,28 @@ function countVow(str) {
   return vowels.length
 }
 console.log(countVow("There are so many vowels and so little time."))
+
+
+//prime number tester
+function prime(num) {
+  if (num < 2) return false
+  for(var x = 2; x < num; x++){
+    if(num%x===0)
+      return false;
+  }
+  return true
+}
+console.log(prime(8))
+
+
+// find second lowest, and second highest, respectively
+// remember the caveat of the .sort() function (integers versus strings)
+function highLow(arr) {
+  var orderArr = arr.sort(function(a, b){return a-b})
+  var high = Math.max.apply(null, orderArr)
+  var low = Math.min.apply(null, orderArr)
+  var finalHigh = orderArr[(orderArr.length - 1)]
+  var finalLow = orderArr[1]
+  return [finalLow, finalHigh]
+}
+console.log(highLow([30,3,20,7,5,6,4,8,1,14]))
