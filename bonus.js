@@ -171,3 +171,35 @@ function highLow(arr) {
   return [finalLow, finalHigh]
 }
 console.log(highLow([30,3,20,7,5,6,4,8,1,14]))
+
+//convert an amount to coins
+
+function toCoins(num) {
+  var coins = []
+  var quarters = Math.floor(num/25)
+  coins.push(quarters)
+  var remaining = num - (quarters * 25)
+  
+  var dimes = Math.floor(remaining/10)
+  coins.push(dimes)
+  remaining = remaining - (dimes * 10)
+  
+  
+  var nickles = Math.floor(remaining/5)
+  coins.push(nickles)
+  remaining = remaining - (nickles * 5)
+  
+  var pennies = Math.floor(remaining/1)
+  coins.push(pennies)
+  
+  console.log('You have: ' + coins[0] + ' quarters, ' + coins[1] + ' dimes, ' + coins[2] + ' nickels, and ' + coins[3] + ' pennies.' )
+
+}
+console.log(toCoins(96))
+
+//compute the value of a base # and an exponent (b to the power of n)
+function power(base, number) {
+  var result = Math.pow(base, number)
+  return result
+}
+console.log(power(2,2))
