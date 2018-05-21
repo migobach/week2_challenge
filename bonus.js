@@ -6,7 +6,7 @@ d = 6;
 // addition
 console.log(a + b)
 
-// // sum an array
+// sum an array
 var arr = [7,8,9,6,7,9]
 var sum = 0
 
@@ -15,7 +15,7 @@ for (var i = 0; i < arr.length; i++) {
 }
 console.log(sum)
 
-// //F > C
+//F > C
 tempF = 82;
 tempC = (tempF - 30) / 1.8
 console.log(tempC)
@@ -255,5 +255,4 @@ console.log(higherThan(arr))
 function check(x) {
   return x > 50
 }
-
 console.log(arr.filter(check))
