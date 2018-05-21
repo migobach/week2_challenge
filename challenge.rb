@@ -70,3 +70,26 @@ def twoDice
     end
 end
 twoDice
+
+# average an array
+@arr = [12,23,3,4,45,56,67,78,89]
+def averageArr 
+  total = @arr.sum
+  average = total / @arr.length
+  puts "Average = #{average}"
+end
+averageArr
+
+
+# FizzBuzz
+def fizzBuzz
+  (1..100).each do |x|
+    arr = []
+    arr << "FizzBuzz" if x % 15 == 0
+    arr << "Fizz" if x % 5 == 0 
+    arr << "Buzz" if x % 3 == 0
+    arr << x 
+    puts arr
+  end
+end
+fizzBuzz

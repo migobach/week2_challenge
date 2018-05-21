@@ -53,7 +53,7 @@ for (var i=1; i <= 100; i++)
       console.log(i)
   }
 
-//Factoral
+//Factorial
 function factoralize(num) {
   var result = num
   if (num === 0 || num === 1)
